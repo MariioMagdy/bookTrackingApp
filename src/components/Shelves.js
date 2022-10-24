@@ -6,7 +6,6 @@ export const Shelves = ({ Books, moveBooks }) => {
   const [CurrentReading, SetCurrntReading] = useState([]);
   const [WantToRead, SetWantToRead] = useState([]);
   const [Read, SetRead] = useState([]);
-  console.log(Books);
 
   return (
     <div>
