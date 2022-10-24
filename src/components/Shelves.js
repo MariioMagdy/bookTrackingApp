@@ -1,12 +1,7 @@
 import React from "react";
 import { Shelf } from "./Shelf";
-import { useState } from "react";
 
 export const Shelves = ({ Books, moveBooks }) => {
-  const [CurrentReading, SetCurrntReading] = useState([]);
-  const [WantToRead, SetWantToRead] = useState([]);
-  const [Read, SetRead] = useState([]);
-
   return (
     <div>
       <Shelf

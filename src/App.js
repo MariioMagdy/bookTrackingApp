@@ -25,7 +25,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    let active = true;
     if (searchQuery) {
       const searchFun = async () => {
         const res = await BooksAPI.search(searchQuery);
