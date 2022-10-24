@@ -19,7 +19,6 @@ function App() {
       const res = await BooksAPI.getAll();
       setBooks(res);
       setIdBook(idMap(res));
-      console.log(res);
     };
 
     getBooks();
@@ -30,14 +29,12 @@ function App() {
     if (searchQuery) {
       const searchFun = async () => {
         const res = await BooksAPI.search(searchQuery);
-        console.log(res);
         if (res?.error && !res.length) {
           SetError(true);
           setSearchResult([]);
         } else {
           SetError(false);
           setSearchResult(res);
-          console.log(newSearch);
         }
       };
       searchFun();
@@ -45,8 +42,6 @@ function App() {
       setSearchResult([]);
     }
   }, [searchQuery]);
-
-  console.log(Books);
 
   const moveBooks = (book, moveTo) => {
     const updateBook = Books.map((b) => {
